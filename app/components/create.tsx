@@ -149,10 +149,8 @@ const Create = ({ loading, setLoading, setImages }: CreateType) => {
   const [isSelectedP, setIsSelectedP] = useState(false)
   const [isSelectedNp, setIsSelectedNp] = useState(false)
   const [isSelectedIc, setIsSelectedIc] = useState(false)
-  const [isSelectedSize, setIsSelectedSize] = useState(false)
   const [isSelectedGs, setIsSelectedGs] = useState(false)
   const [isSelectedNi, setIsSelectedNi] = useState(false)
-  const [isSelectedSeed, setIsSelectedSeed] = useState(false)
   return (
     <>
       <div className="border-b-2 border-sky-200 mb-4 font-bold text-xl text-center pt-4 ">FreePictureGenerate</div>
@@ -163,7 +161,7 @@ const Create = ({ loading, setLoading, setImages }: CreateType) => {
           <div className="mb-5">
             <div className='flex gap-1  justify-between' onMouseEnter={() => setIsSelectedP(true)} onMouseLeave={() => setIsSelectedP(false)}>
               {!isSelectedP ? <div className="font-bold mb-2 text-sm overflow-hidden">Prompt</div> : false}
-              {isSelectedP ? <div className=" font-bold mb-2 text-sm overflow-hidden ">画像に含める</div> : false}
+              {isSelectedP ? <div className=" font-bold mb-2 text-sm overflow-hidden">画像に含める</div> : false}
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
               </svg>

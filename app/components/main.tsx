@@ -6,41 +6,18 @@ import Generate from "./generate";
 import Create from "./create";
 import Modal from "./modal";
 
-const testImages: imagesType[] = [
-  {
-    imageSrc: 'https://placehold.jp/512x512.png',
-    prompt: 'test prompt1',
-    negative: 'test negative prompt1',
-    width: 512,
-    height: 512,
-    ratio: '1:1',
-    steps: 30,
-    seed: 1,
-  },
-  {
-    imageSrc: 'https://placehold.jp/512x512.png',
-    prompt: 'test prompt2',
-    negative: 'test negative prompt2',
-    width: 512,
-    height: 512,
-    ratio: '1:1',
-    steps: 30,
-    seed: 1,
-  },
-]
 const Main = () => {
   const [loading, setLoading] = useState(false);
   const [images, setImages] = useState<imagesType[] | null>(null);
   const [modalOpen, setModalOpen] = useState(false)
   const [modalData, setModalData] = useState<imagesType | null>(null)
 
-
   const closeModal = () => {
     setModalOpen(false);
   }
 
   return (
-    <div className="grid grid-cols-5 gap-4">
+    <div className="grid grid-cols-5 gap-4 mx-4">
       {/* モーダル */}
       {modalData && <Modal isOpen={modalOpen} closeModal={closeModal} modalData={modalData} />}
       <div className=" col-span-2">
